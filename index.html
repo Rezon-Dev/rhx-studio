@@ -1,1 +1,555 @@
-<script>document.write(decodeURIComponent(escape(atob("PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9IlVURi04Ij48bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+PHRpdGxlPlJIWCBTdHVkaW8gfCBGdXR1cmlzdGljIEFnZW5jeTwvdGl0bGU+PGxpbmsgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1Qb3BwaW5zOndnaHRANDAwOzYwMDs3MDAmZmFtaWx5PUludGVyOndnaHRAMzAwOzQwMDs2MDAmZGlzcGxheT1zd2FwIiByZWw9InN0eWxlc2hlZXQiPjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvZm9udC1hd2Vzb21lLzYuNC4wL2Nzcy9hbGwubWluLmNzcyI+PHN0eWxlPiA6cm9vdCB7IC0tcHJpbWFyeTogIzAwZjJmZjsgLS1zZWNvbmRhcnk6ICM3MDAwZmY7IC0tYmc6ICMwNTA1MDU7IC0tY2FyZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KTsgLS1ib3JkZXI6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKTsgLS10ZXh0OiAjZmZmZmZmOyAtLWRpbTogI2EwYTBhMDsgfSAvKiAtLS0gRU1FUkdFTkNZIExPQURFUiBGSVggLS0tICovICNsb2FkZXIgeyBwb3NpdGlvbjogZml4ZWQ7IGluc2V0OiAwOyBiYWNrZ3JvdW5kOiAjMDAwOyB6LWluZGV4OiA5OTk5OTsgZGlzcGxheTogZmxleDsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IHRyYW5zaXRpb246IG9wYWNpdHkgMC41cyBlYXNlOyB9IC5zcGlubmVyIHsgd2lkdGg6IDUwcHg7IGhlaWdodDogNTBweDsgYm9yZGVyOiAzcHggc29saWQgdmFyKC0tYm9yZGVyKTsgYm9yZGVyLXRvcC1jb2xvcjogdmFyKC0tcHJpbWFyeSk7IGJvcmRlci1yYWRpdXM6IDUwJTsgYW5pbWF0aW9uOiBzcGluIDAuOHMgbGluZWFyIGluZmluaXRlOyB9IEBrZXlmcmFtZXMgc3BpbiB7IHRvIHsgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfSB9ICogeyBtYXJnaW46IDA7IHBhZGRpbmc6IDA7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IHNjcm9sbC1iZWhhdmlvcjogc21vb3RoOyB9IGJvZHkgeyBiYWNrZ3JvdW5kOiB2YXIoLS1iZyk7IGNvbG9yOiB2YXIoLS10ZXh0KTsgZm9udC1mYW1pbHk6ICdJbnRlcicsIHNhbnMtc2VyaWY7IG92ZXJmbG93LXg6IGhpZGRlbjsgfSAvKiBCYWNrZ3JvdW5kIEdsb3dzICovIC5nbG93IHsgcG9zaXRpb246IGZpeGVkOyB3aWR0aDogMzAwcHg7IGhlaWdodDogMzAwcHg7IGJvcmRlci1yYWRpdXM6IDUwJTsgZmlsdGVyOiBibHVyKDEwMHB4KTsgei1pbmRleDogLTE7IG9wYWNpdHk6IDAuMjsgfSAuZ2xvdy0xIHsgYmFja2dyb3VuZDogdmFyKC0tcHJpbWFyeSk7IHRvcDogLTEwJTsgcmlnaHQ6IC01JTsgfSAuZ2xvdy0yIHsgYmFja2dyb3VuZDogdmFyKC0tc2Vjb25kYXJ5KTsgYm90dG9tOiAtMTAlOyBsZWZ0OiAtNSU7IH0gLyogTmF2aWdhdGlvbiAqLyBuYXYgeyBwb3NpdGlvbjogZml4ZWQ7IHRvcDogMDsgd2lkdGg6IDEwMCU7IHotaW5kZXg6IDEwMDA7IHBhZGRpbmc6IDE1cHggNSU7IGJhY2tncm91bmQ6IHJnYmEoMCwwLDAsMC44KTsgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDE1cHgpOyBib3JkZXItYm90dG9tOiAxcHggc29saWQgdmFyKC0tYm9yZGVyKTsgZGlzcGxheTogZmxleDsganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOyBhbGlnbi1pdGVtczogY2VudGVyOyB9IC5sb2dvIHsgZm9udC1mYW1pbHk6ICdQb3BwaW5zJzsgZm9udC13ZWlnaHQ6IDcwMDsgZm9udC1zaXplOiAxLjVyZW07IGNvbG9yOiAjZmZmOyB0ZXh0LWRlY29yYXRpb246IG5vbmU7IH0gLmxvZ28gc3BhbiB7IGNvbG9yOiB2YXIoLS1wcmltYXJ5KTsgfSAubmF2LWxpbmtzIHsgZGlzcGxheTogZmxleDsgZ2FwOiAyMHB4OyBsaXN0LXN0eWxlOiBub25lOyB9IC5uYXYtbGlua3MgYSB7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsgY29sb3I6IHZhcigtLWRpbSk7IGZvbnQtc2l6ZTogMC45cmVtOyB0cmFuc2l0aW9uOiAwLjNzOyB9IC5uYXYtbGlua3MgYTpob3ZlciB7IGNvbG9yOiB2YXIoLS1wcmltYXJ5KTsgfSAuYnVyZ2VyIHsgZGlzcGxheTogbm9uZTsgZm9udC1zaXplOiAxLjVyZW07IGN1cnNvcjogcG9pbnRlcjsgfSAvKiBTZWN0aW9ucyAqLyBzZWN0aW9uIHsgcGFkZGluZzogMTAwcHggNSU7IG1heC13aWR0aDogMTIwMHB4OyBtYXJnaW46IDAgYXV0bzsgfSAuaGVybyB7IGhlaWdodDogMTAwdmg7IGRpc3BsYXk6IGZsZXg7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IGp1c3RpZnktY29udGVudDogY2VudGVyOyBhbGlnbi1pdGVtczogY2VudGVyOyB0ZXh0LWFsaWduOiBjZW50ZXI7IH0gLmhlcm8gaDEgeyBmb250LXNpemU6IGNsYW1wKDIuNXJlbSwgOHZ3LCA0cmVtKTsgZm9udC1mYW1pbHk6ICdQb3BwaW5zJzsgbGluZS1oZWlnaHQ6IDEuMTsgbWFyZ2luLWJvdHRvbTogMjBweDsgfSAuaGVybyBwIHsgZm9udC1zaXplOiAxLjJyZW07IGNvbG9yOiB2YXIoLS1kaW0pOyBtYXJnaW4tYm90dG9tOiAzMHB4OyB9IC5idG4geyBwYWRkaW5nOiAxNXB4IDMwcHg7IGJvcmRlci1yYWRpdXM6IDUwcHg7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsgZm9udC13ZWlnaHQ6IDYwMDsgZGlzcGxheTogaW5saW5lLWJsb2NrOyB0cmFuc2l0aW9uOiAwLjNzOyBib3JkZXI6IG5vbmU7IGN1cnNvcjogcG9pbnRlcjsgfSAuYnRuLXAgeyBiYWNrZ3JvdW5kOiB2YXIoLS1wcmltYXJ5KTsgY29sb3I6ICMwMDA7IGJveC1zaGFkb3c6IDAgMCAyMHB4IHJnYmEoMCwyNDIsMjU1LDAuNCk7IH0gLmJ0bi1wOmhvdmVyIHsgdHJhbnNmb3JtOiBzY2FsZSgxLjA1KTsgfSAvKiBHcmlkICovIC5ncmlkIHsgZGlzcGxheTogZ3JpZDsgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoYXV0by1maXQsIG1pbm1heCgyODBweCwgMWZyKSk7IGdhcDogMjBweDsgbWFyZ2luLXRvcDogNTBweDsgfSAuY2FyZCB7IGJhY2tncm91bmQ6IHZhcigtLWNhcmQpOyBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1ib3JkZXIpOyBwYWRkaW5nOiAzMHB4OyBib3JkZXItcmFkaXVzOiAyMHB4OyB0cmFuc2l0aW9uOiAwLjNzOyB9IC5jYXJkOmhvdmVyIHsgYm9yZGVyLWNvbG9yOiB2YXIoLS1wcmltYXJ5KTsgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01cHgpOyB9IC5jYXJkIGkgeyBmb250LXNpemU6IDJyZW07IGNvbG9yOiB2YXIoLS1wcmltYXJ5KTsgbWFyZ2luLWJvdHRvbTogMTVweDsgfSAvKiBTdGF0cyAqLyAuc3RhdHMgeyBkaXNwbGF5OiBmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDsgZmxleC13cmFwOiB3cmFwOyBiYWNrZ3JvdW5kOiB2YXIoLS1jYXJkKTsgcGFkZGluZzogNDBweDsgYm9yZGVyLXJhZGl1czogMjBweDsgbWFyZ2luOiA1MHB4IDA7IH0gLnN0YXQtaXRlbSB7IHRleHQtYWxpZ246IGNlbnRlcjsgfSAuc3RhdC1pdGVtIGgyIHsgZm9udC1zaXplOiAyLjVyZW07IGNvbG9yOiB2YXIoLS1wcmltYXJ5KTsgfSAvKiBGb3JtICovIC5jb250YWN0LWJveCB7IGJhY2tncm91bmQ6IHZhcigtLWNhcmQpOyBwYWRkaW5nOiA0MHB4OyBib3JkZXItcmFkaXVzOiAzMHB4OyBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1ib3JkZXIpOyB9IC5mb3JtLWdyb3VwIHsgbWFyZ2luLWJvdHRvbTogMjBweDsgfSAuZm9ybS1ncm91cCBsYWJlbCB7IGRpc3BsYXk6IGJsb2NrOyBtYXJnaW4tYm90dG9tOiA4cHg7IGZvbnQtc2l6ZTogMC44cmVtOyBjb2xvcjogdmFyKC0tZGltKTsgfSAuZm9ybS1ncm91cCBpbnB1dCwgLmZvcm0tZ3JvdXAgc2VsZWN0LCAuZm9ybS1ncm91cCB0ZXh0YXJlYSB7IHdpZHRoOiAxMDAlOyBwYWRkaW5nOiAxNXB4OyBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuMyk7IGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWJvcmRlcik7IGJvcmRlci1yYWRpdXM6IDEwcHg7IGNvbG9yOiAjZmZmOyBvdXRsaW5lOiBub25lOyB9IC8qIEZsb2F0aW5nIEJ1dHRvbiAqLyAuZmxvYXQtd2EgeyBwb3NpdGlvbjogZml4ZWQ7IGJvdHRvbTogMjBweDsgcmlnaHQ6IDIwcHg7IHdpZHRoOiA2MHB4OyBoZWlnaHQ6IDYwcHg7IGJhY2tncm91bmQ6ICMyNWQzNjY7IGJvcmRlci1yYWRpdXM6IDUwJTsgZGlzcGxheTogZmxleDsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGNvbG9yOiAjZmZmOyBmb250LXNpemU6IDEuOHJlbTsgYm94LXNoYWRvdzogMCA1cHggMTVweCByZ2JhKDAsMCwwLDAuMyk7IHotaW5kZXg6IDEwMDA7IGFuaW1hdGlvbjogcHVsc2UgMnMgaW5maW5pdGU7IH0gQGtleWZyYW1lcyBwdWxzZSB7IDAlIHsgdHJhbnNmb3JtOiBzY2FsZSgxKTsgfSA1MCUgeyB0cmFuc2Zvcm06IHNjYWxlKDEuMSk7IH0gMTAwJSB7IHRyYW5zZm9ybTogc2NhbGUoMSk7IH0gfSAvKiBSZXNwb25zaXZlICovIEBtZWRpYSAobWF4LXdpZHRoOiA3NjhweCkgeyAubmF2LWxpbmtzIHsgZGlzcGxheTogbm9uZTsgfSAuYnVyZ2VyIHsgZGlzcGxheTogYmxvY2s7IH0gLmhlcm8gaDEgeyBmb250LXNpemU6IDIuNXJlbTsgfSB9IC8qIFJldmVhbCAqLyAucmV2ZWFsIHsgb3BhY2l0eTogMDsgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDMwcHgpOyB0cmFuc2l0aW9uOiAwLjZzIGVhc2Utb3V0OyB9IC5yZXZlYWwuYWN0aXZlIHsgb3BhY2l0eTogMTsgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDApOyB9IDwvc3R5bGU+PC9oZWFkPjxib2R5PjxkaXYgaWQ9ImxvYWRlciI+PGRpdiBjbGFzcz0ic3Bpbm5lciI+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0iZ2xvdyBnbG93LTEiPjwvZGl2PjxkaXYgY2xhc3M9Imdsb3cgZ2xvdy0yIj48L2Rpdj48bmF2PjxhIGhyZWY9IiMiIGNsYXNzPSJsb2dvIj5SSFggPHNwYW4+U1RVRElPPC9zcGFuPjwvYT48dWwgY2xhc3M9Im5hdi1saW5rcyI+PGxpPjxhIGhyZWY9IiNob21lIj5Ib21lPC9hPjwvbGk+PGxpPjxhIGhyZWY9IiNzZXJ2aWNlcyI+U2VydmljZXM8L2E+PC9saT48bGk+PGEgaHJlZj0iI3ByaWNpbmciPlByaWNpbmc8L2E+PC9saT48bGk+PGEgaHJlZj0iI2NvbnRhY3QiPkNvbnRhY3Q8L2E+PC9saT48L3VsPjxkaXYgY2xhc3M9ImJ1cmdlciI+PGkgY2xhc3M9ImZhcyBmYS1iYXJzIj48L2k+PC9kaXY+PC9uYXY+PHNlY3Rpb24gY2xhc3M9Imhlcm8iIGlkPSJob21lIj48aDEgY2xhc3M9InJldmVhbCI+QnVpbGQgUHJlbWl1bSBEaWdpdGFsIEV4cGVyaWVuY2VzPC9oMT48cCBjbGFzcz0icmV2ZWFsIj5XZWJzaXRlcywgQUkgVG9vbHMsIGFuZCBCcmFuZGluZyBmb3IgdGhlIG5leHQgZ2VuZXJhdGlvbi48L3A+PGRpdiBjbGFzcz0icmV2ZWFsIj48YSBocmVmPSIjY29udGFjdCIgY2xhc3M9ImJ0biBidG4tcCI+U3RhcnQgUHJvamVjdDwvYT48L2Rpdj48L3NlY3Rpb24+PHNlY3Rpb24gaWQ9InNlcnZpY2VzIj48aDIgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsgbWFyZ2luLWJvdHRvbTogNDBweDsiPk91ciBTZXJ2aWNlczwvaDI+PGRpdiBjbGFzcz0iZ3JpZCI+PGRpdiBjbGFzcz0iY2FyZCByZXZlYWwiPjxpIGNsYXNzPSJmYXMgZmEtbGFwdG9wLWNvZGUiPjwvaT48aDM+V2ViIERldmVsb3BtZW50PC9oMz48cD5DbGVhbiwgbW9kZXJuLCBhbmQgaGlnaC1zcGVlZCB3ZWJzaXRlcy48L3A+PC9kaXY+PGRpdiBjbGFzcz0iY2FyZCByZXZlYWwiPjxpIGNsYXNzPSJmYXMgZmEtcm9ib3QiPjwvaT48aDM+QUkgVG9vbCBEZXY8L2gzPjxwPkN1c3RvbSBBSSBzb2x1dGlvbnMgZm9yIHlvdXIgYnVzaW5lc3MuPC9wPjwvZGl2PjxkaXYgY2xhc3M9ImNhcmQgcmV2ZWFsIj48aSBjbGFzcz0iZmFzIGZhLW1vYmlsZS1hbHQiPjwvaT48aDM+VUkvVVggRGVzaWduPC9oMz48cD5Nb2Rlcm4gbW9iaWxlLWZpcnN0IGFwcGxpY2F0aW9uIGRlc2lnbnMuPC9wPjwvZGl2PjwvZGl2Pjwvc2VjdGlvbj48c2VjdGlvbj48ZGl2IGNsYXNzPSJzdGF0cyByZXZlYWwiPjxkaXYgY2xhc3M9InN0YXQtaXRlbSI+PGgyIGNsYXNzPSJjb3VudGVyIiBkYXRhLXRhcmdldD0iMTUwIj4wPC9oMj48cD5Qcm9qZWN0czwvcD48L2Rpdj48ZGl2IGNsYXNzPSJzdGF0LWl0ZW0iPjxoMiBjbGFzcz0iY291bnRlciIgZGF0YS10YXJnZXQ9Ijk5Ij4wPC9oMj48cD5IYXBweSBDbGllbnRzPC9wPjwvZGl2PjwvZGl2Pjwvc2VjdGlvbj48c2VjdGlvbiBpZD0iY29udGFjdCI+PGRpdiBjbGFzcz0iY29udGFjdC1ib3ggcmV2ZWFsIj48aDIgc3R5bGU9Im1hcmdpbi1ib3R0b206IDIwcHg7Ij5Cb29rIGEgUHJvamVjdDwvaDI+PGZvcm0gaWQ9IndhRm9ybSI+PGRpdiBjbGFzcz0iZm9ybS1ncm91cCI+PGxhYmVsPk5hbWU8L2xhYmVsPjxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ibmFtZSIgcGxhY2Vob2xkZXI9IkVudGVyIHlvdXIgbmFtZSIgcmVxdWlyZWQ+PC9kaXY+PGRpdiBjbGFzcz0iZm9ybS1ncm91cCI+PGxhYmVsPlByb2plY3QgVHlwZTwvbGFiZWw+PHNlbGVjdCBpZD0idHlwZSI+PG9wdGlvbj5XZWJzaXRlIERlc2lnbjwvb3B0aW9uPjxvcHRpb24+QUkgVG9vbCBEZXZlbG9wbWVudDwvb3B0aW9uPjxvcHRpb24+QnJhbmRpbmc8L29wdGlvbj48L3NlbGVjdD48L2Rpdj48ZGl2IGNsYXNzPSJmb3JtLWdyb3VwIj48bGFiZWw+TWVzc2FnZTwvbGFiZWw+PHRleHRhcmVhIGlkPSJtc2ciIHJvd3M9IjQiIHBsYWNlaG9sZGVyPSJEZXNjcmliZSB5b3VyIHByb2plY3QiPjwvdGV4dGFyZWE+PC9kaXY+PGJ1dHRvbiB0eXBlPSJzdWJtaXQiIGNsYXNzPSJidG4gYnRuLXAiIHN0eWxlPSJ3aWR0aDogMTAwJTsiPlN1Ym1pdCB2aWEgV2hhdHNBcHA8L2J1dHRvbj48L2Zvcm0+PC9kaXY+PC9zZWN0aW9uPjxhIGhyZWY9Imh0dHBzOi8vd2EubWUvJiM1NzsmIzQ5OyYjNTY7JiM1NjsmIzQ5OyYjNTA7JiM1NjsmIzUwOyYjNTQ7JiM1MDsmIzQ5OyYjNTY7IiBjbGFzcz0iZmxvYXQtd2EiPjxpIGNsYXNzPSJmYWIgZmEtd2hhdHNhcHAiPjwvaT48L2E+PGZvb3RlciBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyBwYWRkaW5nOiA0MHB4OyBib3JkZXItdG9wOiAxcHggc29saWQgdmFyKC0tYm9yZGVyKTsiPjxwPiZjb3B5OyAyMDI0IFJIWCBTdHVkaW8gfCBDcmVhdGVkIGJ5IFJlem9uPC9wPjwvZm9vdGVyPjxzY3JpcHQ+IC8vIC0tLSBFTUVSR0VOQ1kgRk9SQ0UgSElERSBMT0FERVIgLS0tIC8vIFRoaXMgaGlkZXMgdGhlIGJsYWNrIHNjcmVlbiBhZnRlciAxIHNlY29uZCBubyBtYXR0ZXIgd2hhdCBzZXRUaW1lb3V0KCgpID0+IHsgY29uc3QgbG9hZGVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2xvYWRlcicpOyBpZihsb2FkZXIpIHsgbG9hZGVyLnN0eWxlLm9wYWNpdHkgPSAnMCc7IHNldFRpbWVvdXQoKCkgPT4gbG9hZGVyLnN0eWxlLmRpc3BsYXkgPSAnbm9uZScsIDUwMCk7IH0gfSwgMTAwMCk7IC8vIFNjcm9sbCBSZXZlYWwgZnVuY3Rpb24gcmV2ZWFsKCkgeyB2YXIgcmV2ZWFscyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoIi5yZXZlYWwiKTsgZm9yICh2YXIgaSA9IDA7IGkgPCByZXZlYWxzLmxlbmd0aDsgaSsrKSB7IHZhciB3aW5kb3dIZWlnaHQgPSB3aW5kb3cuaW5uZXJIZWlnaHQ7IHZhciBlbGVtZW50VG9wID0gcmV2ZWFsc1tpXS5nZXRCb3VuZGluZ0NsaWVudFJlY3QoKS50b3A7IGlmIChlbGVtZW50VG9wIDwgd2luZG93SGVpZ2h0IC0gNTApIHsgcmV2ZWFsc1tpXS5jbGFzc0xpc3QuYWRkKCJhY3RpdmUiKTsgfSB9IH0gd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoInNjcm9sbCIsIHJldmVhbCk7IC8vIENvdW50ZXIgY29uc3QgY291bnRlcnMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcuY291bnRlcicpOyBjb3VudGVycy5mb3JFYWNoKGNvdW50ZXIgPT4geyBjb25zdCB1cGRhdGVDb3VudCA9ICgpID0+IHsgY29uc3QgdGFyZ2V0ID0gK2NvdW50ZXIuZ2V0QXR0cmlidXRlKCdkYXRhLXRhcmdldCcpOyBjb25zdCBjb3VudCA9ICtjb3VudGVyLmlubmVyVGV4dDsgY29uc3Qgc3BlZWQgPSB0YXJnZXQgLyA1MDsgaWYgKGNvdW50IDwgdGFyZ2V0KSB7IGNvdW50ZXIuaW5uZXJUZXh0ID0gTWF0aC5jZWlsKGNvdW50ICsgc3BlZWQpOyBzZXRUaW1lb3V0KHVwZGF0ZUNvdW50LCA1MCk7IH0gZWxzZSB7IGNvdW50ZXIuaW5uZXJUZXh0ID0gdGFyZ2V0ICsgIisiOyB9IH07IHVwZGF0ZUNvdW50KCk7IH0pOyAvLyBXaGF0c0FwcCBGb3JtIFN1Ym1pc3Npb24gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3dhRm9ybScpLmFkZEV2ZW50TGlzdGVuZXIoJ3N1Ym1pdCcsIGZ1bmN0aW9uKGUpIHsgZS5wcmV2ZW50RGVmYXVsdCgpOyBjb25zdCBuYW1lID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ25hbWUnKS52YWx1ZTsgY29uc3QgdHlwZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd0eXBlJykudmFsdWU7IGNvbnN0IG1zZyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdtc2cnKS52YWx1ZTsgY29uc3Qgd2hhdHNhcHBVcmwgPSBgaHR0cHM6Ly93YS5tZS8mIzU3OyYjNDk7JiM1NjsmIzU2OyYjNDk7JiM1MDsmIzU2OyYjNTA7JiM1NDsmIzUwOyYjNDk7JiM1Njs/dGV4dD1IZWxsbyBSSFggU3R1ZGlvLCAlMEElMEEqTmFtZToqICR7bmFtZX0lMEEqUHJvamVjdDoqICR7dHlwZX0lMEEqTWVzc2FnZToqICR7bXNnfWA7IHdpbmRvdy5vcGVuKHdoYXRzYXBwVXJsLCAnX2JsYW5rJyk7IH0pOyA8L3NjcmlwdD48L2JvZHk+PC9odG1sPg=="))));</script>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHX Studio | Creative Design Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        :root {
+            --primary: #000000;
+            --secondary: #666666;
+            --accent: #8b5cf6;
+            --background: #ffffff;
+            --light-gray: #f5f5f5;
+            --border: #e5e5e5;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            padding: 1.2rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .services-grid, .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card, .pricing-card {
+            padding: 2rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover, .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Company Snapshots Section */
+        .snapshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .snapshot-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .snapshot-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .snapshot-img {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+        }
+
+        .snapshot-img i {
+            font-size: 3rem;
+            opacity: 0.8;
+        }
+
+        .snapshot-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .snapshot-item:hover .snapshot-overlay {
+            transform: translateY(0);
+        }
+
+        .snapshot-overlay h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .snapshot-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .pricing-card {
+            text-align: center;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .pricing-card li {
+            padding: 0.5rem 0;
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 60px 1.5rem;
+            }
+        }
+
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="#" class="logo">RHX<span>Studio</span></a>
+        <div class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#snapshots">Snapshots</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div>
+        <h1>Create Boldly<br>With RHX Studio</h1>
+        <p>We craft minimalist design experiences that elevate brands and inspire action.</p>
+        <a href="#contact" class="btn">Start a Project</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <p>RHX Studio is a creative design agency based in India, specializing in minimalist, impactful design solutions.</p>
+            <p>We believe in the power of simplicity — creating work that speaks volumes without unnecessary noise. Our team of designers, developers, and creatives work together to bring your vision to life.</p>
+            <p>Every project is a partnership, and we're committed to delivering excellence at every step.</p>
+        </div>
+        <div class="about-stats">
+            <div>
+                <div class="stat-number">50+</div>
+                <div>Projects</div>
+            </div>
+            <div>
+                <div class="stat-number">30+</div>
+                <div>Clients</div>
+            </div>
+            <div>
+                <div class="stat-number">4+</div>
+                <div>Years</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-pen-fancy"></i>
+            <h3>Brand Identity</h3>
+            <p>Logo design, brand guidelines, and visual identity systems that stand out.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Web Design</h3>
+            <p>Modern, responsive websites that are fast, beautiful, and user-friendly.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>UI/UX Design</h3>
+            <p>Intuitive interfaces and seamless user experiences for web and mobile.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Digital Strategy</h3>
+            <p>Data-driven marketing strategies to grow your online presence.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Company Snapshots Section (3 Snapshots) -->
+<section id="snapshots">
+    <h2 class="section-title">Company Snapshots</h2>
+    <div class="snapshots-grid">
+        <div class="snapshot-item">
+            <div class="snapshot-img">
+                <i class="fas fa-building"></i>
+            </div>
+            <div class="snapshot-overlay">
+                <img src="workspace.png" alt="" />
+                <h3>Our Office</h3>
+                <p>Modern creative workspace in the heart of the city</p>
+            </div>
+        </div>
+        <div class="snapshot-item">
+            <div class="snapshot-img">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="snapshot-overlay">
+                <img src="workspace2.png" alt="" />
+                <h3>Our Team</h3>
+                <p>Creative minds working together to deliver excellence</p>
+            </div>
+        </div>
+        <div class="snapshot-item">
+            <div class="snapshot-img">
+                <i class="fas fa-laptop"></i>
+            </div>
+            <div class="snapshot-overlay">
+                <img src="building.png" alt="" />
+                <h3>Work Culture</h3>
+                <p>Collaborative environment focused on innovation</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing">
+    <h2 class="section-title">Pricing</h2>
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3>Basic</h3>
+            <div class="price">₹5,000</div>
+            <ul>
+                <li>Brand Identity Design</li>
+                <li>Basic Website (3 pages)</li>
+                <li>Social Media Kit</li>
+                <li>Email Support</li>
+            </ul>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+        <div class="pricing-card">
+            <h3>Professional</h3>
+            <div class="price">₹15,000</div>
+            <ul>
+                <li>Complete Brand Identity</li>
+                <li>Custom Website (5-7 pages)</li>
+                <li>UI/UX Design</li>
+                <li>Priority Support</li>
+            </ul>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+        <div class="pricing-card">
+            <h3>Enterprise</h3>
+            <div class="price">Custom</div>
+            <ul>
+                <li>Full Digital Strategy</li>
+                <li>Complex Web Applications</li>
+                <li>Dedicated Team</li>
+                <li>24/7 Support</li>
+            </ul>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <form class="contact-form" id="contactForm">
+        <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Subject">
+        </div>
+        <div class="form-group">
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 RHX Studio. All rights reserved.</p>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            }
+        });
+    });
+
+    // Contact Form Submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for reaching out! We will get back to you soon.');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
