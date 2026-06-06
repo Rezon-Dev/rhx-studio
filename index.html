@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RHX Studio | Creative Design Agency</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>RHX Studio | Creative Design Agency in India</title>
+    <meta name="description" content="RHX Studio is a creative design agency specializing in brand identity, web design, UI/UX, and digital strategy. Minimalist designs that elevate your brand.">
+    <meta name="keywords" content="creative agency, design studio, brand identity, web design, UI UX design, digital strategy, RHX Studio">
+    <meta name="author" content="RHX Studio">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Hindi, English">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="RHX Studio | Creative Design Agency">
+    <meta property="og:description" content="We craft minimalist design experiences that elevate brands and inspire action.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-username.github.io/rhx-studio/">
+    <meta property="og:image" content="logo.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RHX Studio | Creative Design Agency">
+    <meta name="twitter:description" content="We craft minimalist design experiences that elevate brands and inspire action.">
+    <meta name="twitter:image" content="logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-username.github.io/rhx-studio/">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -54,6 +85,14 @@
             letter-spacing: -0.5px;
             text-decoration: none;
             color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-img {
+            height: 35px;
+            width: auto;
         }
 
         .logo span {
@@ -167,7 +206,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Company Snapshots Section */
         .snapshots-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -196,6 +234,12 @@
             justify-content: center;
             color: white;
             position: relative;
+        }
+
+        .snapshot-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .snapshot-img i {
@@ -264,6 +308,7 @@
             border: 1px solid var(--border);
             font-family: inherit;
             font-size: 1rem;
+            border-radius: 4px;
         }
 
         textarea {
@@ -342,7 +387,10 @@
 
 <nav>
     <div class="nav-container">
-        <a href="#" class="logo">RHX<span>Studio</span></a>
+        <a href="#" class="logo">
+            <img src="logo.png" alt="RHX Studio Logo" class="logo-img" onerror="this.style.display='none'">
+            RHX<span>Studio</span>
+        </a>
         <div class="menu-btn" id="menuBtn">
             <i class="fas fa-bars"></i>
         </div>
@@ -425,30 +473,27 @@
     <div class="snapshots-grid">
         <div class="snapshot-item">
             <div class="snapshot-img">
-                <i class="fas fa-building"></i>
+                <img src="workspace.png" alt="Our Office" onerror="this.parentElement.innerHTML='<i class=\'fas fa-building\'></i>'">
             </div>
             <div class="snapshot-overlay">
-                <img src="workspace.png" alt="" />
                 <h3>Our Office</h3>
                 <p>Modern creative workspace in the heart of the city</p>
             </div>
         </div>
         <div class="snapshot-item">
             <div class="snapshot-img">
-                <i class="fas fa-users"></i>
+                <img src="workspace2.png" alt="Our Team" onerror="this.parentElement.innerHTML='<i class=\'fas fa-users\'></i>'">
             </div>
             <div class="snapshot-overlay">
-                <img src="workspace2.png" alt="" />
                 <h3>Our Team</h3>
                 <p>Creative minds working together to deliver excellence</p>
             </div>
         </div>
         <div class="snapshot-item">
             <div class="snapshot-img">
-                <i class="fas fa-laptop"></i>
+                <img src="building.png" alt="Work Culture" onerror="this.parentElement.innerHTML='<i class=\'fas fa-laptop\'></i>'">
             </div>
             <div class="snapshot-overlay">
-                <img src="building.png" alt="" />
                 <h3>Work Culture</h3>
                 <p>Collaborative environment focused on innovation</p>
             </div>
