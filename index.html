@@ -6,33 +6,18 @@
     
     <!-- SEO Meta Tags -->
     <title>RHX Studio | Creative Design Agency in India</title>
-    <meta name="description" content="RHX Studio is a creative design agency specializing in brand identity, web design, UI/UX, and digital strategy. Minimalist designs that elevate your brand.">
-    <meta name="keywords" content="creative agency, design studio, brand identity, web design, UI UX design, digital strategy, RHX Studio">
+    <meta name="description" content="RHX Studio is a creative design agency specializing in brand identity, web design, UI/UX, and digital strategy.">
+    <meta name="keywords" content="creative agency, design studio, brand identity, web design, RHX Studio">
     <meta name="author" content="RHX Studio">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="Hindi, English">
     
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="RHX Studio | Creative Design Agency">
-    <meta property="og:description" content="We craft minimalist design experiences that elevate brands and inspire action.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-username.github.io/rhx-studio/">
-    <meta property="og:image" content="logo.png">
+    <!-- Favicon - Multiple Formats for Better Support -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    <link rel="icon" type="image/png" href="https://emojicdn.elk.sh/🎨?style=twitter" sizes="32x32">
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RHX Studio | Creative Design Agency">
-    <meta name="twitter:description" content="We craft minimalist design experiences that elevate brands and inspire action.">
-    <meta name="twitter:image" content="logo.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <!-- Agar logo.png available hai toh ye use hoga -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png" onerror="this.onerror=null;this.href='https://emojicdn.elk.sh/🎨'">
     <link rel="apple-touch-icon" href="logo.png">
-    <link rel="shortcut icon" type="image/png" href="logo.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://your-username.github.io/rhx-studio/">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -55,8 +40,6 @@
             --primary: #000000;
             --secondary: #666666;
             --accent: #8b5cf6;
-            --background: #ffffff;
-            --light-gray: #f5f5f5;
             --border: #e5e5e5;
         }
 
@@ -68,7 +51,7 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid var(--border);
-            padding: 1.2rem 2rem;
+            padding: 1rem 2rem;
         }
 
         .nav-container {
@@ -91,8 +74,10 @@
         }
         
         .logo-img {
-            height: 35px;
+            height: 40px;
             width: auto;
+            max-width: 150px;
+            object-fit: contain;
         }
 
         .logo span {
@@ -216,9 +201,11 @@
         .snapshot-item {
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 12px;
             cursor: pointer;
             transition: transform 0.3s;
+            background: var(--light-gray);
+            min-height: 300px;
         }
 
         .snapshot-item:hover {
@@ -228,12 +215,11 @@
         .snapshot-img {
             width: 100%;
             height: 300px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
         }
 
         .snapshot-img img {
@@ -244,7 +230,7 @@
 
         .snapshot-img i {
             font-size: 3rem;
-            opacity: 0.8;
+            color: white;
         }
 
         .snapshot-overlay {
@@ -252,7 +238,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.8);
             color: white;
             padding: 1rem;
             transform: translateY(100%);
@@ -266,11 +252,6 @@
         .snapshot-overlay h3 {
             font-size: 1.2rem;
             margin-bottom: 0.3rem;
-        }
-
-        .snapshot-overlay p {
-            font-size: 0.9rem;
-            opacity: 0.9;
         }
 
         .pricing-card {
@@ -309,10 +290,6 @@
             font-family: inherit;
             font-size: 1rem;
             border-radius: 4px;
-        }
-
-        textarea {
-            resize: vertical;
         }
 
         .about-content {
@@ -356,7 +333,7 @@
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .about-content {
@@ -365,6 +342,10 @@
             
             section {
                 padding: 60px 1.5rem;
+            }
+            
+            .snapshot-img {
+                height: 250px;
             }
         }
 
@@ -381,6 +362,11 @@
             gap: 1rem;
             border-bottom: 1px solid var(--border);
         }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -388,8 +374,9 @@
 <nav>
     <div class="nav-container">
         <a href="#" class="logo">
-            <img src="logo.png" alt="RHX Studio Logo" class="logo-img" onerror="this.style.display='none'">
-            RHX<span>Studio</span>
+            <img src="logo.png" alt="RHX Studio" class="logo-img" 
+                 onerror="this.style.display='none'; this.nextSibling.style.display='inline';">
+            <span style="display: inline;">RHX<span style="color: #8b5cf6;">Studio</span></span>
         </a>
         <div class="menu-btn" id="menuBtn">
             <i class="fas fa-bars"></i>
@@ -420,22 +407,12 @@
     <div class="about-content">
         <div class="about-text">
             <p>RHX Studio is a creative design agency based in India, specializing in minimalist, impactful design solutions.</p>
-            <p>We believe in the power of simplicity — creating work that speaks volumes without unnecessary noise. Our team of designers, developers, and creatives work together to bring your vision to life.</p>
-            <p>Every project is a partnership, and we're committed to delivering excellence at every step.</p>
+            <p>We believe in the power of simplicity — creating work that speaks volumes without unnecessary noise.</p>
         </div>
         <div class="about-stats">
-            <div>
-                <div class="stat-number">50+</div>
-                <div>Projects</div>
-            </div>
-            <div>
-                <div class="stat-number">30+</div>
-                <div>Clients</div>
-            </div>
-            <div>
-                <div class="stat-number">4+</div>
-                <div>Years</div>
-            </div>
+            <div><div class="stat-number">50+</div><div>Projects</div></div>
+            <div><div class="stat-number">30+</div><div>Clients</div></div>
+            <div><div class="stat-number">4+</div><div>Years</div></div>
         </div>
     </div>
 </section>
@@ -444,58 +421,42 @@
 <section id="services">
     <h2 class="section-title">Services</h2>
     <div class="services-grid">
-        <div class="service-card">
-            <i class="fas fa-pen-fancy"></i>
-            <h3>Brand Identity</h3>
-            <p>Logo design, brand guidelines, and visual identity systems that stand out.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-laptop-code"></i>
-            <h3>Web Design</h3>
-            <p>Modern, responsive websites that are fast, beautiful, and user-friendly.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>UI/UX Design</h3>
-            <p>Intuitive interfaces and seamless user experiences for web and mobile.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Digital Strategy</h3>
-            <p>Data-driven marketing strategies to grow your online presence.</p>
-        </div>
+        <div class="service-card"><i class="fas fa-pen-fancy"></i><h3>Brand Identity</h3><p>Logo design, brand guidelines, and visual identity systems.</p></div>
+        <div class="service-card"><i class="fas fa-laptop-code"></i><h3>Web Design</h3><p>Modern, responsive websites that are fast and beautiful.</p></div>
+        <div class="service-card"><i class="fas fa-mobile-alt"></i><h3>UI/UX Design</h3><p>Intuitive interfaces and seamless user experiences.</p></div>
+        <div class="service-card"><i class="fas fa-chart-line"></i><h3>Digital Strategy</h3><p>Data-driven marketing strategies to grow your presence.</p></div>
     </div>
 </section>
 
-<!-- Company Snapshots Section (3 Snapshots) -->
+<!-- Company Snapshots Section -->
 <section id="snapshots">
     <h2 class="section-title">Company Snapshots</h2>
     <div class="snapshots-grid">
         <div class="snapshot-item">
-            <div class="snapshot-img">
-                <img src="workspace.png" alt="Our Office" onerror="this.parentElement.innerHTML='<i class=\'fas fa-building\'></i>'">
+            <div class="snapshot-img" id="snap1">
+                <i class="fas fa-building"></i>
             </div>
             <div class="snapshot-overlay">
                 <h3>Our Office</h3>
-                <p>Modern creative workspace in the heart of the city</p>
+                <p>Modern creative workspace</p>
             </div>
         </div>
         <div class="snapshot-item">
-            <div class="snapshot-img">
-                <img src="workspace2.png" alt="Our Team" onerror="this.parentElement.innerHTML='<i class=\'fas fa-users\'></i>'">
+            <div class="snapshot-img" id="snap2">
+                <i class="fas fa-users"></i>
             </div>
             <div class="snapshot-overlay">
                 <h3>Our Team</h3>
-                <p>Creative minds working together to deliver excellence</p>
+                <p>Creative minds working together</p>
             </div>
         </div>
         <div class="snapshot-item">
-            <div class="snapshot-img">
-                <img src="building.png" alt="Work Culture" onerror="this.parentElement.innerHTML='<i class=\'fas fa-laptop\'></i>'">
+            <div class="snapshot-img" id="snap3">
+                <i class="fas fa-laptop"></i>
             </div>
             <div class="snapshot-overlay">
                 <h3>Work Culture</h3>
-                <p>Collaborative environment focused on innovation</p>
+                <p>Collaborative innovation</p>
             </div>
         </div>
     </div>
@@ -505,39 +466,9 @@
 <section id="pricing">
     <h2 class="section-title">Pricing</h2>
     <div class="pricing-grid">
-        <div class="pricing-card">
-            <h3>Basic</h3>
-            <div class="price">₹5,000</div>
-            <ul>
-                <li>Brand Identity Design</li>
-                <li>Basic Website (3 pages)</li>
-                <li>Social Media Kit</li>
-                <li>Email Support</li>
-            </ul>
-            <a href="#contact" class="btn">Get Started</a>
-        </div>
-        <div class="pricing-card">
-            <h3>Professional</h3>
-            <div class="price">₹15,000</div>
-            <ul>
-                <li>Complete Brand Identity</li>
-                <li>Custom Website (5-7 pages)</li>
-                <li>UI/UX Design</li>
-                <li>Priority Support</li>
-            </ul>
-            <a href="#contact" class="btn">Get Started</a>
-        </div>
-        <div class="pricing-card">
-            <h3>Enterprise</h3>
-            <div class="price">Custom</div>
-            <ul>
-                <li>Full Digital Strategy</li>
-                <li>Complex Web Applications</li>
-                <li>Dedicated Team</li>
-                <li>24/7 Support</li>
-            </ul>
-            <a href="#contact" class="btn">Contact Us</a>
-        </div>
+        <div class="pricing-card"><h3>Basic</h3><div class="price">₹5,000</div><ul><li>Brand Identity Design</li><li>Basic Website (3 pages)</li><li>Email Support</li></ul><a href="#contact" class="btn">Get Started</a></div>
+        <div class="pricing-card"><h3>Professional</h3><div class="price">₹15,000</div><ul><li>Complete Brand Identity</li><li>Custom Website (5-7 pages)</li><li>Priority Support</li></ul><a href="#contact" class="btn">Get Started</a></div>
+        <div class="pricing-card"><h3>Enterprise</h3><div class="price">Custom</div><ul><li>Full Digital Strategy</li><li>Complex Web Applications</li><li>24/7 Support</li></ul><a href="#contact" class="btn">Contact Us</a></div>
     </div>
 </section>
 
@@ -545,18 +476,10 @@
 <section id="contact">
     <h2 class="section-title">Get In Touch</h2>
     <form class="contact-form" id="contactForm">
-        <div class="form-group">
-            <input type="text" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-            <input type="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-            <input type="text" placeholder="Subject">
-        </div>
-        <div class="form-group">
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-        </div>
+        <div class="form-group"><input type="text" placeholder="Your Name" required></div>
+        <div class="form-group"><input type="email" placeholder="Your Email" required></div>
+        <div class="form-group"><input type="text" placeholder="Subject"></div>
+        <div class="form-group"><textarea rows="5" placeholder="Your Message" required></textarea></div>
         <button type="submit" class="btn">Send Message</button>
     </form>
 </section>
@@ -566,7 +489,7 @@
 </footer>
 
 <script>
-    // Mobile Menu Toggle
+    // Mobile Menu
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     
@@ -588,12 +511,33 @@
         });
     });
 
-    // Contact Form Submission
+    // Contact Form
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
         alert('Thank you for reaching out! We will get back to you soon.');
         this.reset();
     });
+    
+    // Function to load images dynamically (optional)
+    function loadSnapshotImage(elementId, imagePath) {
+        const container = document.getElementById(elementId);
+        if (container && imagePath) {
+            const img = new Image();
+            img.onload = function() {
+                container.innerHTML = '';
+                container.appendChild(img);
+            };
+            img.src = imagePath;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+        }
+    }
+    
+     Agar aapke paas images hain toh uncomment karein:
+     loadSnapshotImage('snap1', 'workspace.png');
+     loadSnapshotImage('snap2', 'workspace2.png');
+    loadSnapshotImage('snap3', 'building.png');
 </script>
 
 </body>
